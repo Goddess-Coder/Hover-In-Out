@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover In/Out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hoverinout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            // hover taco_group1 enter function
+            $(".taco_group1").hover(function(){
+                var hoverimgSrc = $(this).attr("src");
+                var group1 = ["imgs/veganspringtacos.jpg", "imgs/VeganCrispyCauliflowerTacos.jpg", "imgs/RoastedVeggieTacos.jpg", "imgs/VeganGlutenFreeChickpeaTacos.jpg"];                
+                $(".hover").css("color", "red");
+                $(".in").css("color", "red");
+                for (var g1 in group1){
+                    if (group1[g1] == hoverimgSrc){
+                        if(g1 == 0){
+                            $(".group1_zero").attr("src", "imgs/LovingItVeganTacos.jpg");
+                        }
+                        if (g1 == 1) {
+                            $(".group1_one").attr("src", "imgs/SpicyJackfruitTacos.jpg")
+                        }
+                        if (g1 == 2) {
+                            $(".group1_two").attr("src", "imgs/MushroomTacos.jpg")
+                        }
+                        if (g1 == 3) {
+                            $(".group1_three").attr("src", "imgs/spicyhummustacos.jpg")
+                        }
+                    }
+                }
+
+            }, 
+            // hover leaving function
+            function(){
+                var group2 = ["imgs/LovingItVeganTacos.jpg", "imgs/SpicyJackfruitTacos.jpg", "imgs/MushroomTacos.jpg", "imgs/spicyhummustacos.jpg"];
+                $(".hover").css("color", "green");
+                $(".in").css("color", "green");
+                for(var g2 in group2){
+                    if(group2[g2] == group2[g2]){
+                        if (g2 == 0) {
+                            $(".group1_zero").attr("src", "imgs/veganspringtacos.jpg");
+                        }
+                        if (g2 == 1) {
+                            $(".group1_one").attr("src", "imgs/VeganCrispyCauliflowerTacos.jpg")
+                        }
+                        if (g2 == 2) {
+                            $(".group1_two").attr("src", "imgs/RoastedVeggieTacos.jpg")
+                        }
+                        if (g2 == 3) {
+                            $(".group1_three").attr("src", "imgs/VeganGlutenFreeChickpeaTacos.jpg")
+                        }
+                    }
+                }
+            })
+            // end of .taco_group1 function
+
+            // hover taco_group2 enter function
+            $(".taco_group2").hover(function(){
+                var hoverimgSrc = $(this).attr("src");
+                var group2 = ["imgs/LovingItVeganTacos.jpg", "imgs/SpicyJackfruitTacos.jpg", "imgs/MushroomTacos.jpg", "imgs/spicyhummustacos.jpg"];
+                $(".hover").css("color", "mediumpurple");
+                $(".in").css("color", "mediumpurple");
+                for (var g2 in group2){
+                    if(group2[g2] == hoverimgSrc){
+                        if (g2 == 0) {
+                            $(".group2_zero").attr("src", "imgs/veganspringtacos.jpg")
+                        }
+                        if (g2 == 1) {
+                            $(".group2_one").attr("src", "imgs/VeganCrispyCauliflowerTacos.jpg")
+                        }
+                        if (g2 == 2) {
+                            $(".group2_two").attr("src", "imgs/RoastedVeggieTacos.jpg")
+                        }
+                        if (g2 == 3) {
+                            $(".group2_three").attr("src", "imgs/VeganGlutenFreeChickpeaTacos.jpg")
+                        }
+                    }
+                }
+            },
+            // hover leaving function
+            function(){
+                var group1 = ["imgs/veganspringtacos.jpg", "imgs/VeganCrispyCauliflowerTacos.jpg", "imgs/RoastedVeggieTacos.jpg", "imgs/VeganGlutenFreeChickpeaTacos.jpg"];
+                $(".hover").css("color", "green");
+                $(".in").css("color", "green");
+
+                for(var g1 in group1){
+                    if (group1[g1] == group1[g1]){
+                        if (g1 == 0) {
+                            $(".group2_zero").attr("src", "imgs/LovingItVeganTacos.jpg");
+                        }
+                        if (g1 == 1) {
+                            $(".group2_one").attr("src", "imgs/SpicyJackfruitTacos.jpg")
+                        }
+                        if (g1 == 2) {
+                            $(".group2_two").attr("src", "imgs/MushroomTacos.jpg")
+                        }
+                        if (g1 == 3) {
+                            $(".group2_three").attr("src", "imgs/spicyhummustacos.jpg")
+                        }
+                    }
+                }
+            })
+            // end of .taco_group2 function
+        });
+    </script>
+</head>
+<body>
+        <div class="container">
+            <h1><span class="hover">H</span>overing <span class="in">I</span>n and <span class="out">O</span>ut With Vegan Taco</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="Tacos taco_group1 group1_zero" src="imgs/veganspringtacos.jpg" alt="Vegan Spring Tacos" data-alt-src="Vegan Spring Tacos">
+                    <img class="Tacos taco_group1 group1_one" src="imgs/VeganCrispyCauliflowerTacos.jpg" alt="Vegan Crispy Cauliflower Tacos">
+                    <img class="Tacos taco_group1 group1_two" src="imgs/RoastedVeggieTacos.jpg" alt="Roasted Veggie Tacos">
+                    <img class="Tacos taco_group1 group1_three" src="imgs/VeganGlutenFreeChickpeaTacos.jpg" alt="Vegan Gluten Free Chickpea Tacos">
+                </div>
+                <!-- first col -->
+            </div>
+            <!-- top row -->
+    
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="Tacos taco_group2 group2_zero" src="imgs/LovingItVeganTacos.jpg" alt="Loving it Vegan Tacos">
+                    <img class="Tacos taco_group2 group2_one" src="imgs/SpicyJackfruitTacos.jpg" alt="Spicy Jackfruit Tacos">
+                    <img class="Tacos taco_group2 group2_two" src="imgs/MushroomTacos.jpg" alt="Mushroom Tacos">
+                    <img class="Tacos taco_group2 group2_three" src="imgs/spicyhummustacos.jpg" alt="Spicy Hummus Tacos">
+                </div>
+                <!-- second col -->
+            </div>
+            <!-- second row -->
+    
+        </div>
+        <!-- container ends -->
+    
+    
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+</body>
+</html>
